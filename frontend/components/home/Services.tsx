@@ -1,120 +1,144 @@
 "use client"
 
-import { Code, Smartphone, BarChart, Bot, Server, Globe, ArrowUpRight } from "lucide-react"
+import {
+    Code,
+    Smartphone,
+    BarChart,
+    Bot,
+    Server,
+    Globe,
+    ArrowUpRight,
+} from "lucide-react"
 import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
 
 const services = [
     {
         icon: Globe,
-        title: "Web Development",
-        description: "High-performance, scalable web applications using Next.js and modern frameworks. We build the infrastructure of the future.",
-        className: "md:col-span-2",
-        gradient: "from-blue-500/20 to-cyan-500/20"
+        title: "Web Platforms",
+        description:
+            "Next-gen web systems engineered with performance-first architecture and scalable design.",
+        accent: "from-blue-500 to-cyan-500",
     },
     {
         icon: Bot,
-        title: "AI & Machine Learning",
-        description: "Intelligent solutions integrating NLP, computer vision, and predictive analytics to automate your business.",
-        className: "md:col-span-1",
-        gradient: "from-violet-500/20 to-purple-500/20"
+        title: "AI Automation",
+        description:
+            "AI-powered workflows and intelligent systems that optimize operations and reduce cost.",
+        accent: "from-violet-500 to-fuchsia-500",
     },
     {
         icon: Smartphone,
-        title: "Mobile Apps",
-        description: "Native and cross-platform mobile solutions delivering fluid experiences on iOS and Android.",
-        className: "md:col-span-1",
-        gradient: "from-emerald-500/20 to-teal-500/20"
+        title: "Mobile Experiences",
+        description:
+            "Pixel-perfect mobile applications delivering speed, usability, and reliability.",
+        accent: "from-emerald-500 to-teal-500",
     },
     {
         icon: Server,
         title: "Custom Software",
-        description: "Tailored enterprise software architected to streamline your complex business operations securely.",
-        className: "md:col-span-2",
-        gradient: "from-orange-500/20 to-amber-500/20"
+        description:
+            "Secure, enterprise-grade software tailored to complex business logic.",
+        accent: "from-orange-500 to-amber-500",
     },
     {
         icon: Code,
-        title: "API Integration",
-        description: "Seamless third-party integrations.",
-        className: "md:col-span-1",
-        gradient: "from-pink-500/20 to-rose-500/20"
+        title: "API Engineering",
+        description:
+            "Robust APIs and integrations powering seamless communication between systems.",
+        accent: "from-pink-500 to-rose-500",
     },
     {
         icon: BarChart,
-        title: "Digital Marketing",
-        description: "Data-driven growth strategies.",
-        className: "md:col-span-1",
-        gradient: "from-indigo-500/20 to-blue-500/20"
+        title: "Data Intelligence",
+        description:
+            "Advanced analytics and dashboards that turn data into actionable insight.",
+        accent: "from-indigo-500 to-violet-500",
     },
 ]
 
-export function Services() {
+export default function Services() {
     return (
-        <section className="py-24 relative overflow-hidden">
-            <div className="absolute inset-0 bg-slate-50/50 dark:bg-slate-900/20 -z-10" />
+        <section className="relative bg-white py-32">
+            {/* Soft background accents */}
+            <div className="absolute inset-0 -z-10">
+                <div className="absolute left-1/2 top-0 h-[420px] w-[820px] -translate-x-1/2 rounded-full bg-gradient-to-r from-blue-100 via-indigo-100 to-violet-100 blur-3xl opacity-60" />
+            </div>
 
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16 max-w-3xl mx-auto">
+            <div className="mx-auto max-w-7xl px-6">
+                {/* Header */}
+                <div className="mx-auto mb-20 max-w-3xl text-center">
                     <motion.h2
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 16 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.5 }}
-                        className="text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl"
+                        className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl"
                     >
-                        Our Expertise
+                        Solutions Designed to Scale
                     </motion.h2>
+
                     <motion.p
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 16 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.5, delay: 0.1 }}
-                        className="mt-4 text-xl text-slate-600 dark:text-slate-400"
+                        transition={{ delay: 0.1 }}
+                        className="mt-5 text-lg text-slate-600"
                     >
-                        Comprehensive technology solutions engineered for the modern enterprise.
+                        We help businesses build future-ready digital products through
+                        cutting-edge technology and thoughtful engineering.
                     </motion.p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {services.map((service, index) => (
+                {/* Grid */}
+                <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                    {services.map((service, i) => (
                         <motion.div
                             key={service.title}
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 24 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                            whileHover={{ y: -5 }}
-                            className={cn(
-                                "group relative overflow-hidden rounded-3xl p-8 transition-all duration-300",
-                                "bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800",
-                                "hover:shadow-2xl hover:border-transparent dark:hover:border-transparent",
-                                service.className
-                            )}
+                            transition={{ delay: i * 0.08 }}
+                            whileHover={{ y: -8 }}
+                            className="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-8 transition-all duration-300 hover:border-slate-300  hover:shadow-[0_1px_4px_rgba(0,0,0,0.16)]"
                         >
-                            {/* Hover Gradient Background */}
-                            <div className={cn(
-                                "absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br",
-                                service.gradient
-                            )} />
+                            {/* Diagonal accent slice */}
+                            <div
+                                className={cn(
+                                    "pointer-events-none absolute -right-24 -top-24 h-48 w-48 rotate-45 opacity-0 transition-opacity duration-300 group-hover:opacity-100",
+                                    "bg-gradient-to-br",
+                                    service.accent
+                                )}
+                            />
 
-                            <div className="relative z-10 h-full flex flex-col justify-between">
-                                <div>
-                                    <div className="mb-6 inline-flex items-center justify-center h-12 w-12 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white group-hover:scale-110 transition-transform duration-300">
-                                        <service.icon className="h-6 w-6" />
-                                    </div>
-                                    <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3">
-                                        {service.title}
-                                    </h3>
-                                    <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-pretty">
-                                        {service.description}
-                                    </p>
+                            {/* Content */}
+                            <div className="relative z-10">
+                                {/* Icon */}
+                                {/* Icon */}
+                                <div
+                                    className={cn(
+                                        "mb-6 flex h-14 w-14 items-center justify-center rounded-xl",
+                                        "bg-slate-100 text-slate-900",
+                                        "transition-all duration-300",
+                                        "group-hover:scale-110 group-hover:rotate-6",
+                                        "group-hover:bg-gradient-to-br",
+                                        service.accent
+                                    )}
+                                >
+                                    <service.icon className="h-6 w-6 transition-colors duration-300 group-hover:text-white" />
                                 </div>
 
-                                <div className="mt-8 flex justify-end">
-                                    <div className="rounded-full p-2 bg-slate-100 dark:bg-slate-800 text-slate-400 group-hover:bg-white group-hover:text-black dark:group-hover:text-white transition-colors">
-                                        <ArrowUpRight className="h-5 w-5" />
-                                    </div>
+                                <h3 className="mb-3 text-2xl font-bold text-slate-900">
+                                    {service.title}
+                                </h3>
+
+                                <p className="text-slate-600 leading-relaxed">
+                                    {service.description}
+                                </p>
+
+                                {/* CTA */}
+                                <div className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-slate-500 transition-all group-hover:text-slate-900">
+                                    Explore Service
+                                    <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                                 </div>
                             </div>
                         </motion.div>

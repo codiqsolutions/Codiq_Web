@@ -86,27 +86,6 @@ export default function Hero() {
             <Link href="/services">Our Services</Link>
           </Button>
         </motion.div>
-
-        {/* Visual Mock / Product Preview */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-20"
-        >
-          <div className="mx-auto max-w-5xl rounded-2xl border border-slate-200 bg-white p-4 shadow-xl">
-            <div className="relative aspect-[16/9] overflow-hidden rounded-xl bg-gradient-to-br from-slate-50 to-white">
-              {/* Mock UI */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-[70%] space-y-4">
-                  <div className="h-4 w-1/3 rounded bg-slate-200" />
-                  <div className="h-4 w-2/3 rounded bg-slate-200" />
-                  <div className="h-4 w-1/2 rounded bg-slate-200" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   )

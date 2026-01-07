@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react"
 
 export default function CTA() {
   return (
-    <section className="relative overflow-hidden bg-white py-28">
+    <section className="relative overflow-hidden bg-slate-50 py-28">
       {/* Subtle background accents */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute left-1/2 top-0 h-[300px] w-[800px] -translate-x-1/2 rounded-full bg-gradient-to-r from-blue-100 via-indigo-100 to-violet-100 blur-3xl opacity-60" />
@@ -51,11 +51,15 @@ export default function CTA() {
         >
           <Button
             size="lg"
-            className="h-14 rounded-full px-10 text-base shadow-lg shadow-blue-600/25"
+            className="h-14 rounded-full px-8 text-base 
+             bg-[var(--primary)] 
+             text-white 
+             hover:bg-[var(--primary-hover)]
+             shadow-lg shadow-blue-600/20"
             asChild
           >
             <Link href="/contact">
-              Start Your Project <ArrowRight className="ml-2 h-5 w-5" />
+              Start a Project <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>
         </motion.div>

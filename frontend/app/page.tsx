@@ -6,6 +6,7 @@ import WhyChooseUs from "@/components/home/WhyChooseUs"
 import TechnologiesWeUse from "@/components/home/TechnologiesWeUse"
 import CompanyStats from "@/components/home/CompanyStats"
 import Testimonials from "@/components/home/Testimonials"
+import IndustriesWeServe from "@/components/home/IndustriesWeServe"
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <TechnologiesWeUse />
       <CompanyStats />
       <Testimonials />
+      <IndustriesWeServe />
       <CTA />
     </>
   )

@@ -3,12 +3,14 @@ import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 
-export default function BlogDetailPage({
+export default async function BlogDetailPage({
   params,
 }: {
   params: { slug: string }
 }) {
-  const post = blogPosts.find((p) => p.slug === params.slug)
+  const { slug } = params   // ✅ now safe
+
+  const post = blogPosts.find((p) => p.slug === slug)
 
   if (!post) notFound()
 
@@ -28,27 +30,23 @@ export default function BlogDetailPage({
 
       {/* Content */}
       <div className="max-w-4xl mx-auto px-4 py-20">
-        {/* Meta */}
         <div className="text-sm text-slate-500 mb-4">
-          <span className="text-blue-600 font-semibold uppercase">
+          <span className="text-blue-600 font-semibold">
             {post.category}
           </span>{" "}
           • {post.date}
         </div>
 
-        {/* Title */}
         <h1 className="text-4xl font-bold text-black mb-8">
           {post.title}
         </h1>
 
-        {/* Content */}
-        <div className="prose prose-lg max-w-none prose-headings:text-black prose-p:text-slate-700">
-          {post.content.split("\n").map((line, index) => (
-            <p key={index}>{line}</p>
+        <div className="prose prose-lg max-w-none">
+          {post.content.split("\n").map((line, i) => (
+            <p key={i}>{line}</p>
           ))}
         </div>
 
-        {/* Back */}
         <Link
           href="/blog"
           className="inline-block mt-16 text-blue-600 font-medium hover:underline"

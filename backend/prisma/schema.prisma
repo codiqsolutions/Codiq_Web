@@ -25,3 +25,14 @@ model ContactSubmission {
   status    String   @default("UNREAD") // UNREAD, READ, ARCHIVED
   createdAt DateTime @default(now())
 }
+
+model Career {
+  id          String   @id @default(cuid())
+  name        String
+  email       String
+  phone       String
+  experience  Int
+  resumeLink  String
+  description String?
+  createdAt   DateTime @default(now())
+}

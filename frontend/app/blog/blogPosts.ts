@@ -28,7 +28,7 @@ AI tools can now:
       "Learn advanced strategies to build ultra-fast, scalable applications using Next.js App Router.",
     date: "Dec 10, 2025",
     category: "Development",
-    image: "/blog/nextjs-performance.jpg",
+    image: "/blog/next-js.png",
     content: `
 Next.js provides powerful tools like App Router, Server Components, and ISR.
 
@@ -45,7 +45,7 @@ Next.js provides powerful tools like App Router, Server Components, and ISR.
       "Discover how custom mobile apps can increase engagement, revenue, and brand loyalty.",
     date: "Nov 28, 2025",
     category: "Business",
-    image: "/blog/mobile-app.jpg",
+    image: "/blog/mobile-app-development-thumbnail.jpg",
     content: `
 Custom mobile apps help businesses build stronger customer relationships and increase retention.
 `,
@@ -57,7 +57,7 @@ Custom mobile apps help businesses build stronger customer relationships and inc
       "Explore the UI/UX trends shaping digital products.",
     date: "Nov 20, 2025",
     category: "Design",
-    image: "/blog/ui-ux.jpg",
+    image: "/blog/ui-ux.png",
     content: `
 Minimalism, motion UI, and AI-driven personalization will dominate UI/UX in 2026.
 `,
@@ -81,7 +81,7 @@ Scaling SaaS requires performance optimization, security, and infrastructure pla
       "Avoid costly mistakes by selecting the best tech stack.",
     date: "Oct 30, 2025",
     category: "Startups",
-    image: "/blog/tech-stack.jpg",
+    image: "/blog/ai.png",
     content: `
 Choosing the right tech stack ensures long-term scalability and cost efficiency.
 `,

@@ -64,17 +64,45 @@ export default function CareersPage() {
         return Object.keys(newErrors).length === 0
     }
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
         if (!validate()) return
 
-        console.log("Application Submitted:", {
-            position,
-            ...form,
-        })
+        try {
+            const res = await fetch("http://localhost:4000/api/career", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    name: form.name,
+                    email: form.email,
+                    phone: form.phone,
+                    experience: form.experience,
+                    resumeLink: "https://example.com/resume.pdf", // TODO: Implement file upload
+                    description: form.coverLetter,
+                }),
+            });
 
-        alert("Application submitted successfully ✅")
-        setOpen(false)
+            if (res.ok) {
+                alert("Application submitted successfully ✅");
+                setOpen(false);
+                setForm({
+                    name: "",
+                    email: "",
+                    phone: "",
+                    experience: "",
+                    resume: null,
+                    coverLetter: "",
+                });
+            } else {
+                const data = await res.json();
+                alert(`Error: ${data.error || "Something went wrong"}`);
+            }
+        } catch (error) {
+            console.error("Submission error:", error);
+            alert("Failed to submit application.");
+        }
     }
 
     return (

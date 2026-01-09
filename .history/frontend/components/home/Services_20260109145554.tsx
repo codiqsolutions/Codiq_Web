@@ -63,7 +63,7 @@ export default function Services() {
         <section className="relative bg-white py-32">
             {/* Soft background accents */}
             <div className="absolute inset-0 -z-10">
-            <div className="absolute left-1/2 top-0 h-[420px] w-[820px] -translate-x-1/2 rounded-full bg-linear-to-r from-blue-100 via-indigo-100 to-violet-100 blur-3xl opacity-60" />
+                <div className="absolute left-1/2 top-0 h-[420px] w-[820px] -translate-x-1/2 rounded-full bg-gradient-to-r from-blue-100 via-indigo-100 to-violet-100 blur-3xl opacity-60" />
             </div>
 
             <div className="mx-auto max-w-7xl px-6">
@@ -105,10 +105,10 @@ export default function Services() {
                             {/* Diagonal accent slice */}
                             <div
                                 className={cn(
-            "pointer-events-none absolute -right-24 -top-24 h-48 w-48 rotate-45 opacity-0 transition-opacity duration-300 group-hover:opacity-100",
-            "bg-linear-to-br",
-            service.accent
-          )}
+                                    "pointer-events-none absolute -right-24 -top-24 h-48 w-48 rotate-45 opacity-0 transition-opacity duration-300 group-hover:opacity-100",
+                                    "bg-gradient-to-br",
+                                    service.accent
+                                )}
                             />
 
                             {/* Content */}
@@ -120,10 +120,10 @@ export default function Services() {
                                         "mb-6 flex h-14 w-14 items-center justify-center rounded-xl",
                                         "bg-slate-100 text-slate-900",
                                         "transition-all duration-300",
-            "group-hover:scale-110 group-hover:rotate-6",
-            "group-hover:bg-linear-to-br",
-            service.accent
-          )}
+                                        "group-hover:scale-110 group-hover:rotate-6",
+                                        "group-hover:bg-gradient-to-br",
+                                        service.accent
+                                    )}
                                 >
                                     <service.icon className="h-6 w-6 transition-colors duration-300 group-hover:text-white" />
                                 </div>

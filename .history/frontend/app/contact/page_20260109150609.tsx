@@ -141,7 +141,7 @@ export default function ContactPage() {
                                         required
                                         value={formData.email}
                                         onChange={handleChange}
-                                        className="w-full rounded-lg border  text-black border-slate-300 bg-white px-4 py-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none"
+                                        className="w-full rounded-lg border border-slate-300 bg-white px-4 py-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none"
                                         placeholder="john@example.com"
                                     />
                                 </div>
@@ -156,7 +156,7 @@ export default function ContactPage() {
                                     name="subject"
                                     value={formData.subject}
                                     onChange={handleChange}
-                                    className="w-full rounded-lg border  text-black border-slate-300 bg-white px-4 py-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none"
+                                    className="w-full rounded-lg border border-slate-300 bg-white px-4 py-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none"
                                     placeholder="Project Inquiry"
                                 />
                             </div>
@@ -171,7 +171,7 @@ export default function ContactPage() {
                                     required
                                     value={formData.message}
                                     onChange={handleChange}
-                                    className="w-full rounded-lg border  text-black border-slate-300 bg-white px-4 py-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none resize-none"
+                                    className="w-full rounded-lg border border-slate-300 bg-white px-4 py-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none resize-none"
                                     placeholder="Tell us about your project..."
                                 />
                             </div>

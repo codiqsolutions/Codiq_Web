@@ -74,7 +74,7 @@ export default async function BlogDetailPage({ params }: Props) {
             {/* Quote Block */}
             <div className="mt-16 p-8 border-l-4 border-blue-600 bg-slate-50 rounded-xl">
               <p className="text-xl font-medium text-slate-800 leading-relaxed">
-                “Technology alone is not enough — the real impact comes from
+                “Technology alone is not enough - the real impact comes from
                 how intelligently it is applied to solve real-world problems.”
               </p>
             </div>

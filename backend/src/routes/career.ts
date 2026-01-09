@@ -31,4 +31,19 @@ router.post("/", async (req, res) => {
   }
 });
 
-export default router;  
+// Protected: Get all applications (Admin only)
+import { authenticateToken } from '../middleware/auth';
+
+router.get("/", authenticateToken, async (req, res) => {
+  try {
+    const applications = await prisma.career.findMany({
+      orderBy: { createdAt: "desc" },
+    });
+    res.json(applications);
+  } catch (error) {
+    console.error("Fetch career applications error:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
+export default router;

@@ -40,4 +40,18 @@ router.post("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         res.status(500).json({ error: "Internal Server Error" });
     }
 }));
+// Protected: Get all applications (Admin only)
+const auth_1 = require("../middleware/auth");
+router.get("/", auth_1.authenticateToken, (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const applications = yield db_1.default.career.findMany({
+            orderBy: { createdAt: "desc" },
+        });
+        res.json(applications);
+    }
+    catch (error) {
+        console.error("Fetch career applications error:", error);
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+}));
 exports.default = router;

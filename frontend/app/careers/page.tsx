@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { PageHeader } from "@/components/PageHeader"
 import { Button } from "@/components/ui/button"
 import { motion, AnimatePresence } from "framer-motion"
@@ -8,32 +8,23 @@ import { X } from "lucide-react"
 
 /* ---------------- JOB DATA ---------------- */
 
-const jobs = [
-    {
-        title: "Senior Frontend Developer",
-        dept: "Engineering",
-        type: "Full-time",
-        loc: "Remote",
-    },
-    {
-        title: "Product Designer (UI/UX)",
-        dept: "Design",
-        type: "Full-time",
-        loc: "New York, NY",
-    },
-    {
-        title: "AI Research Engineer",
-        dept: "R&D",
-        type: "Full-time",
-        loc: "San Francisco, CA",
-    },
-]
+/* ---------------- JOB DATA ---------------- */
+// Jobs data will be fetched from API
+
 
 /* ---------------- PAGE ---------------- */
+interface Job {
+    id: string
+    title: string
+    department: string
+    type: string
+    location: string
+}
 
 export default function CareersPage() {
     const [open, setOpen] = useState(false)
     const [position, setPosition] = useState("")
+    const [jobs, setJobs] = useState<Job[]>([])
     const [errors, setErrors] = useState<Record<string, string>>({})
 
     const [form, setForm] = useState({
@@ -44,6 +35,22 @@ export default function CareersPage() {
         resume: null as File | null,
         coverLetter: "",
     })
+
+    // Fetch jobs
+    useEffect(() => {
+        const fetchJobs = async () => {
+            try {
+                const res = await fetch("http://localhost:4000/api/jobs") // Or use env var
+                if (res.ok) {
+                    const data = await res.json()
+                    setJobs(data)
+                }
+            } catch (error) {
+                console.error("Failed to fetch jobs", error)
+            }
+        }
+        fetchJobs()
+    }, [])
 
     /* ---------------- VALIDATION ---------------- */
 
@@ -152,8 +159,9 @@ export default function CareersPage() {
                                         {job.title}
                                     </h3>
                                     <p className="text-sm text-slate-500 mt-1">
-                                        {job.dept} · {job.type} · {job.loc}
+                                        {job.department} · {job.type} · {job.location}
                                     </p>
+
                                 </div>
 
                                 <Button

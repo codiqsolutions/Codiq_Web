@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import authRoutes from './routes/auth';
 import contactRoutes from './routes/contact';
 import careerRoutes from './routes/career';
+import jobRoutes from './routes/jobs';
 
 dotenv.config();
 
@@ -20,6 +21,8 @@ app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/contact', contactRoutes);
 app.use('/api/career', careerRoutes);
+app.use('/api/jobs', jobRoutes);
+app.use('/api/jobs', jobRoutes);
 
 app.get('/api/health', (req, res) => {
     res.json({ status: 'ok' });

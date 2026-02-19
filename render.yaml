@@ -1,0 +1,58 @@
+services:
+  # -----------------------------
+  # Backend Service (Node.js)
+  # -----------------------------
+  - type: web
+    name: codiq-backend
+    env: node
+    region: ohio # or your preferred region
+    plan: free # or starter/standard
+    buildCommand: cd backend && npm install && npm run build
+    startCommand: cd backend && npm run start
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: DATABASE_URL
+        fromDatabase:
+          name: codiq-db
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true
+      - key: FRONTEND_URL
+        fromService:
+          type: web
+          name: codiq-frontend
+          property: url
+
+  # -----------------------------
+  # Frontend Service (Node.js/Next.js)
+  # -----------------------------
+  - type: web
+    name: codiq-frontend
+    env: node
+    region: ohio
+    plan: free
+    # Determine build/start based on your package.json
+    buildCommand: cd frontend && npm install && npm run build
+    startCommand: cd frontend && npm run start
+    envVars:
+      - key: BACKEND_URL
+        fromService:
+          type: web
+          name: codiq-backend
+          property: url
+      # We need this at build time for next.config.ts if you hardcode it, 
+      # but we used a rewrite, so runtime env var is also good.
+      # Next.js usually needs NEXT_PUBLIC_ vars at build time.
+      # To be safe, we add it here.
+      - key: NEXT_PUBLIC_API_URL
+        value: /api
+      - key: NODE_ENV
+        value: production
+
+databases:
+  - name: codiq-db
+    databaseName: codiq
+    user: codiq_user
+    plan: free
+    region: ohio

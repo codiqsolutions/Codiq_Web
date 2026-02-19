@@ -22,7 +22,7 @@ services:
         fromService:
           type: web
           name: codiq-frontend
-          property: url
+          property: host
 
   # -----------------------------
   # Frontend Service (Node.js/Next.js)
@@ -40,7 +40,7 @@ services:
         fromService:
           type: web
           name: codiq-backend
-          property: url
+          property: host
       # We need this at build time for next.config.ts if you hardcode it, 
       # but we used a rewrite, so runtime env var is also good.
       # Next.js usually needs NEXT_PUBLIC_ vars at build time.

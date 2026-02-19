@@ -15,8 +15,11 @@ const jobs_1 = __importDefault(require("./routes/jobs"));
 dotenv_1.default.config();
 const app = (0, express_1.default)();
 const PORT = process.env.PORT || 4000;
+const frontendUrl = process.env.FRONTEND_URL
+    ? (process.env.FRONTEND_URL.startsWith('http') ? process.env.FRONTEND_URL : `https://${process.env.FRONTEND_URL}`)
+    : 'http://localhost:3000';
 app.use((0, cors_1.default)({
-    origin: process.env.FRONTEND_URL || 'http://localhost:3000', // Allow frontend from env or default to localhost
+    origin: frontendUrl, // Allow frontend from env or default to localhost
     credentials: true
 }));
 app.use(express_1.default.json());

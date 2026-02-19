@@ -7,7 +7,7 @@ services:
     env: node
     region: ohio # or your preferred region
     plan: free # or starter/standard
-    buildCommand: cd backend && npm install && npm run build
+    buildCommand: cd backend && npm install --production=false && npm run build
     startCommand: cd backend && npm run start
     envVars:
       - key: PORT
@@ -33,7 +33,7 @@ services:
     region: ohio
     plan: free
     # Determine build/start based on your package.json
-    buildCommand: cd frontend && npm install && npm run build
+    buildCommand: cd frontend && npm install --production=false && npm run build
     startCommand: cd frontend && npm run start
     envVars:
       - key: BACKEND_URL

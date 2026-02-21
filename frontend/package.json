@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "mkdir -p prisma && cp ../backend/prisma/schema.prisma ./prisma/schema.prisma && npx prisma generate && next build",
+    "build": "mkdir -p prisma && ([ -f ../backend/prisma/schema.prisma ] && cp ../backend/prisma/schema.prisma ./prisma/schema.prisma || echo 'Skipping schema copy - using existing prisma/schema.prisma') && npx prisma generate && next build",
     "start": "next start",
     "lint": "eslint"
   },

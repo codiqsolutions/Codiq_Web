@@ -13,7 +13,7 @@ export default async function ContactsPage() {
     let submissions: ContactSubmission[] = []
 
     try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/contact`, {
+        const res = await fetch(`${process.env.BACKEND_URL}/contact`, {
             headers: {
                 'Authorization': `Bearer ${token}`
             },

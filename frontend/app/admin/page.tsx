@@ -31,11 +31,11 @@ export default async function AdminDashboardPage() {
     // Parallel fetch
     try {
         const [contactRes, careerRes] = await Promise.all([
-            fetch(`${process.env.NEXT_PUBLIC_API_URL}/contact`, {
+            fetch(`${process.env.BACKEND_URL}/contact`, {
                 headers: { 'Authorization': `Bearer ${token}` },
                 cache: 'no-store'
             }),
-            fetch(`${process.env.NEXT_PUBLIC_API_URL}/career`, {
+            fetch(`${process.env.BACKEND_URL}/career`, {
                 headers: { 'Authorization': `Bearer ${token}` },
                 cache: 'no-store'
             })

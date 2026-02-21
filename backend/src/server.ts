@@ -7,6 +7,7 @@ import authRoutes from './routes/auth';
 import contactRoutes from './routes/contact';
 import careerRoutes from './routes/career';
 import jobRoutes from './routes/jobs';
+import visitsRoutes from './routes/visits';
 
 dotenv.config();
 
@@ -37,6 +38,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/contact', contactRoutes);
 app.use('/api/career', careerRoutes);
 app.use('/api/jobs', jobRoutes);
+app.use('/api/visits', visitsRoutes);
 
 app.get('/api/health', (req, res) => {
     res.json({ status: 'ok' });

@@ -28,15 +28,21 @@ export default async function AdminDashboardPage() {
 
     let contactCount = 0
     let careerCount = 0
+    let visitTotal = 0
+    let visitToday = 0
 
     // Parallel fetch
     try {
-        const [contactRes, careerRes] = await Promise.all([
+        const [contactRes, careerRes, visitsRes] = await Promise.all([
             fetch(`${process.env.BACKEND_URL}/contact`, {
                 headers: { 'Authorization': `Bearer ${token}` },
                 cache: 'no-store'
             }),
             fetch(`${process.env.BACKEND_URL}/career`, {
+                headers: { 'Authorization': `Bearer ${token}` },
+                cache: 'no-store'
+            }),
+            fetch(`${process.env.BACKEND_URL}/visits/count`, {
                 headers: { 'Authorization': `Bearer ${token}` },
                 cache: 'no-store'
             })
@@ -49,6 +55,11 @@ export default async function AdminDashboardPage() {
         if (careerRes.ok) {
             const data: Career[] = await careerRes.json()
             careerCount = data.length
+        }
+        if (visitsRes.ok) {
+            const data = await visitsRes.json()
+            visitTotal = data.total
+            visitToday = data.today
         }
     } catch (e) {
         console.error("Failed to fetch stats", e)
@@ -82,14 +93,14 @@ export default async function AdminDashboardPage() {
                     </CardContent>
                 </Card>
 
-                <Card className="glass shadow-sm opacity-60">
+                <Card className="glass shadow-sm">
                     <CardHeader className="pb-2 flex flex-row items-center justify-between space-y-0">
                         <CardTitle className="text-sm font-medium text-slate-500">Website Visits</CardTitle>
                         <Users className="h-4 w-4 text-slate-500" />
                     </CardHeader>
                     <CardContent>
-                        <div className="text-2xl font-bold text-slate-900 dark:text-white">-</div>
-                        <p className="text-xs text-slate-500">Coming soon</p>
+                        <div className="text-2xl font-bold text-slate-900 dark:text-white">{visitTotal.toLocaleString()}</div>
+                        <p className="text-xs text-slate-500">+{visitToday} today</p>
                     </CardContent>
                 </Card>
             </div>

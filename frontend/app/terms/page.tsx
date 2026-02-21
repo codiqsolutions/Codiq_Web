@@ -18,7 +18,7 @@ export default function TermsConditionsPage() {
           <div className="mb-16">
             <p className="text-lg text-slate-600 leading-relaxed">
               These Terms & Conditions govern your access to and use of the
-              services provided by <strong>MegaCode Solution</strong>. By accessing
+              services provided by <strong>Codiq IT Solution</strong>. By accessing
               or using our website, you agree to be bound by these terms.
             </p>
           </div>
@@ -56,7 +56,7 @@ export default function TermsConditionsPage() {
               </h2>
               <p className="text-slate-600 leading-relaxed">
                 All content, trademarks, logos, and software are the exclusive
-                property of <strong>MegaCode Solution</strong> and are protected
+                property of <strong>Codiq IT Solution</strong> and are protected
                 by applicable intellectual property laws.
               </p>
             </div>

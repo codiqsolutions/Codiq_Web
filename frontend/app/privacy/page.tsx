@@ -17,7 +17,7 @@ export default function privacy() {
           {/* Intro */}
           <div className="mb-16">
             <p className="text-lg text-slate-600 leading-relaxed">
-              This Privacy Policy explains how <strong>MegaCode Solution</strong> collects,
+              This Privacy Policy explains how <strong>Codiq IT Solution</strong> collects,
               uses, discloses, and protects your information when you use our website,
               products, and services.
             </p>

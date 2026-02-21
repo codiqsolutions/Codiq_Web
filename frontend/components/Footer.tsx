@@ -65,8 +65,8 @@ export function Footer() {
                 Legal
               </h3>
               <ul className="space-y-4">
-                <FooterLink href="/privacy-policy">Privacy Policy</FooterLink>
-                <FooterLink href="/terms-conditions">Terms & Conditions</FooterLink>
+                <FooterLink href="/privacy">Privacy Policy</FooterLink>
+                <FooterLink href="/terms">Terms & Conditions</FooterLink>
                 <FooterLink href="/cookie-policy">Cookie Policy</FooterLink>
               </ul>
 

@@ -3,6 +3,7 @@ import { ContactSubmission } from "@prisma/client"
 import { Card } from "@/components/ui/card"
 import { Mail, Clock, Inbox } from "lucide-react"
 import { cookies } from 'next/headers'
+import AutoRefresh from "@/components/AutoRefresh"
 
 export const dynamic = 'force-dynamic'
 
@@ -28,6 +29,7 @@ export default async function ContactsPage() {
 
     return (
         <div className="space-y-6">
+            <AutoRefresh interval={30000} />
             <h1 className="text-2xl font-bold text-slate-900 dark:text-white">Contact Submissions</h1>
 
             <Card className="overflow-hidden border-slate-200/60 dark:border-slate-800/60 bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm">

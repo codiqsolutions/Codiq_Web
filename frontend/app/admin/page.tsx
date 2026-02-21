@@ -18,6 +18,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 // import { Search } from "lucide-react"
 import { Users, Briefcase, Mail } from "lucide-react"
 import { cookies } from 'next/headers'
+import AutoRefresh from "@/components/AutoRefresh"
 
 export const dynamic = 'force-dynamic'
 
@@ -55,6 +56,7 @@ export default async function AdminDashboardPage() {
 
     return (
         <div className="space-y-6">
+            <AutoRefresh interval={30000} />
             <h1 className="text-2xl font-bold text-slate-900 dark:text-white">Dashboard Overview</h1>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

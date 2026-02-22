@@ -58,7 +58,7 @@ export default function ServicesPage() {
         description="Professional technology services designed to support business growth and digital transformation."
       />
 
-      <section className="bg-white py-32">
+      <section className="bg-white py-16 sm:py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => (

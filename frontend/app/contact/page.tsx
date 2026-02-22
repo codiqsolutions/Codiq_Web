@@ -44,14 +44,14 @@ export default function ContactPage() {
     }
 
     return (
-        <div className="min-h-screen bg-white py-24">
+        <div className="min-h-screen bg-white py-16 sm:py-24">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 {/* Header */}
-                <div className="text-center mb-16">
+                <div className="text-center mb-10 sm:mb-16">
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl"
+                        className="text-2xl font-bold tracking-tight text-slate-900 sm:text-4xl sm:text-5xl"
                     >
                         Get in Touch
                     </motion.h1>

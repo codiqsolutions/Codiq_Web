@@ -57,6 +57,7 @@ body {
   min-height: 100vh;
   font-feature-settings: "ss01", "ss02", "cv01", "cv02";
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 /* Utilities */

@@ -14,7 +14,7 @@ export default function BlogPage() {
         description="Expert thoughts on technology, design, and digital innovation."
       />
 
-      <section className="bg-white py-28">
+      <section className="bg-white py-16 sm:py-24 lg:py-28">
         <div className="mx-auto max-w-7xl px-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
             {blogPosts.map((post, index) => (

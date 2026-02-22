@@ -75,27 +75,27 @@ export default function Hero() {
         </motion.div>
 
         {/* Heading */}
-        {/* Typewriter Text */}
-        <div className="relative inline-block">
+        <div className="relative">
           <motion.h1
-            className="mx-auto max-w-5xl text-3xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-6xl"
+            className="mx-auto max-w-5xl text-2xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-6xl"
           >
             <span className="bg-linear-to-r from-[#000B58] via-[#003161] to-indigo-800 bg-clip-text text-transparent">
               {currentText}
               <span className="animate-pulse">|</span>
             </span>
           </motion.h1>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.05 }}
+            className="mx-auto mt-2 max-w-5xl text-2xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-7xl"
+          >
+            <span className="bg-linear-to-r from-blue-600 via-indigo-600 to-violet-600 bg-clip-text text-transparent">
+              Products That Scale
+            </span>
+          </motion.h1>
         </div>
-        <motion.h1
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.05 }}
-          className="mx-auto max-w-5xl text-3xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-7xl"
-        >
-          <span className="bg-linear-to-r from-blue-600 via-indigo-600 to-violet-600 bg-clip-text text-transparent">
-            Products That Scale
-          </span>
-        </motion.h1>
 
         {/* Subtitle */}
         <motion.div

@@ -60,49 +60,13 @@ const techLogos: Record<string, React.ComponentType<{ className?: string }>> = {
   "Database Architecture": FaDatabase,
 }
 
-const rows = [
-  {
-    cols: "grid-cols-9",
-    size: "h-28 w-28",
-    items: [
-      "JavaScript",
-      "React.js",
-      "Next.js",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "TypeScript",
-      "REST APIs",
-      "Frontend UI",
-    ],
-  },
-  {
-    cols: "grid-cols-8",
-    size: "h-32 w-32",
-    items: [
-      "Android Apps",
-      "iOS Apps",
-      "Cross-Platform Apps",
-      "Custom Software",
-      "SaaS Platforms",
-      "API Integrations",
-      "Automation Tools",
-      "Enterprise Systems",
-    ],
-  },
-  {
-    cols: "grid-cols-7",
-    size: "h-36 w-36",
-    items: [
-      "Digital Marketing",
-      "SEO & Growth",
-      "Graphics Design",
-      "UI / UX Design",
-      "PostgreSQL",
-      "Prisma ORM",
-      "Database Architecture",
-    ],  
-  },
+const allTechs = [
+  "JavaScript", "React.js", "Next.js", "Node.js", "Express.js",
+  "MongoDB", "TypeScript", "REST APIs", "Frontend UI",
+  "Android Apps", "iOS Apps", "Cross-Platform Apps", "Custom Software",
+  "SaaS Platforms", "API Integrations", "Automation Tools", "Enterprise Systems",
+  "Digital Marketing", "SEO & Growth", "Graphics Design", "UI / UX Design",
+  "PostgreSQL", "Prisma ORM", "Database Architecture",
 ]
 
 export default function Technologies() {
@@ -115,87 +79,77 @@ export default function Technologies() {
         description="A multidimensional technology ecosystem built for modern digital products."
       />
 
-      <section className="relative bg-white py-44 overflow-hidden">
+      <section className="relative bg-white py-16 sm:py-28 lg:py-44 overflow-hidden">
         {/* Ambient Glow */}
         <div className="absolute inset-0 -z-10">
           <div className="absolute left-1/2 top-0 h-[600px] w-[1100px] -translate-x-1/2 rounded-full bg-linear-to-r from-blue-100 via-indigo-100 to-cyan-100 blur-[120px] opacity-60" />
         </div>
 
-        <div className="mx-auto max-w-7xl px-6 space-y-28">
-          {rows.map((row, rowIndex) => (
-            <div
-              key={rowIndex}
-              className={`grid ${row.cols} justify-center gap-x-14 gap-y-20`}
-            >
-              {row.items.map((text, i) => {
-                const LogoIcon = techLogos[text]
-                const isHovered = hoveredTech === text
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 lg:gap-8">
+            {allTechs.map((text, i) => {
+              const LogoIcon = techLogos[text]
+              const isHovered = hoveredTech === text
 
-                return (
-                  <motion.div
-                    key={text}
-                    animate={{ y: [0, -16, 0] }}
-                    transition={{
-                      duration: 4.5 + (i % 3),
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                      delay: i * 0.1,
-                    }}
-                    onMouseEnter={() => setHoveredTech(text)}
-                    onMouseLeave={() => setHoveredTech(null)}
+              return (
+                <motion.div
+                  key={text}
+                  animate={{ y: [0, -10, 0] }}
+                  transition={{
+                    duration: 4.5 + (i % 3),
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: i * 0.1,
+                  }}
+                  onMouseEnter={() => setHoveredTech(text)}
+                  onMouseLeave={() => setHoveredTech(null)}
+                  className={`
+                    h-20 w-20 sm:h-24 sm:w-24 lg:h-28 lg:w-28
+                    rounded-full
+                    bg-linear-to-br
+                    from-blue-50/70
+                    via-white/60
+                    to-indigo-50/70
+                    backdrop-blur-2xl
+                    border border-blue-100/60
+                    shadow-[0_20px_50px_rgba(59,130,246,0.12)]
+                    flex items-center justify-center
+                    text-center
+                    relative
+                    cursor-pointer
+                    transition-all duration-300
+                  `}
+                >
+                  {/* Inner glass reflection */}
+                  <div className="absolute inset-3 rounded-full bg-blue-100/30 blur-xl" />
+
+                  {/* Technology Name - Hidden on hover */}
+                  <span
                     className={`
-                      ${row.size}
-                      rounded-full
-                      bg-linear-to-br
-                      from-blue-50/70
-                      via-white/60
-                      to-indigo-50/70
-                      backdrop-blur-2xl
-                      border border-blue-100/60
-                      shadow-[0_40px_90px_rgba(59,130,246,0.15)]
-                      flex items-center justify-center
-                      text-center
-                      relative
-                      cursor-pointer
-                      transition-all duration-300
+                      relative z-10 px-2 text-[10px] sm:text-xs font-semibold text-slate-800 leading-tight
+                      transition-opacity duration-300
+                      ${isHovered ? "opacity-0" : "opacity-100"}
                     `}
                   >
-                    {/* Inner glass reflection */}
-                    <div className="absolute inset-3 rounded-full bg-blue-100/30 blur-xl" />
+                    {text}
+                  </span>
 
-                    {/* Technology Name - Hidden on hover */}
-                    <span
+                  {/* Technology Logo - Shown on hover */}
+                  {LogoIcon && (
+                    <div
                       className={`
-                        relative z-10 px-4 text-sm font-semibold text-slate-800
+                        absolute inset-0 rounded-full flex items-center justify-center
                         transition-opacity duration-300
-                        ${isHovered ? "opacity-0" : "opacity-100"}
+                        ${isHovered ? "opacity-100" : "opacity-0"}
                       `}
                     >
-                      {text}
-                    </span>
-
-                    {/* Technology Logo - Shown on hover */}
-                    {LogoIcon && (
-                      <div
-                        className={`
-                          absolute inset-0 rounded-full flex items-center justify-center
-                          transition-opacity duration-300
-                          ${isHovered ? "opacity-100" : "opacity-0"}
-                        `}
-                      >
-                        <LogoIcon
-                          className={`
-                            ${row.size.includes("h-28") ? "h-16 w-16" : row.size.includes("h-32") ? "h-20 w-20" : "h-24 w-24"}
-                            text-slate-800
-                          `}
-                        />
-                      </div>
-                    )}
-                  </motion.div>
-                )
-              })}
-            </div>
-          ))}
+                      <LogoIcon className="h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12 text-slate-800" />
+                    </div>
+                  )}
+                </motion.div>
+              )
+            })}
+          </div>
         </div>
       </section>
     </>

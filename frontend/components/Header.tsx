@@ -53,9 +53,9 @@ export default function Header() {
               <Image
                 src="/Logo.PNG"        // icon logo
                 alt="Codiq Icon Logo"
-                width={180}
-                height={180}
-                className="rounded-md"
+                width={130}
+                height={40}
+                className="rounded-md w-[100px] h-auto sm:w-[130px] lg:w-[150px]"
                 priority
               />
             </Link>

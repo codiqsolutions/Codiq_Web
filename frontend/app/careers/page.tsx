@@ -122,9 +122,9 @@ export default function CareersPage() {
             />
 
             {/* JOB LIST */}
-            <section className="bg-white py-28">
+            <section className="bg-white py-16 sm:py-24 lg:py-28">
                 <div className="mx-auto max-w-6xl px-4">
-                    <div className="text-center mb-20">
+                    <div className="text-center mb-10 sm:mb-16 lg:mb-20">
                         <h2 className="text-3xl font-bold text-slate-900">
                             Open Positions
                         </h2>

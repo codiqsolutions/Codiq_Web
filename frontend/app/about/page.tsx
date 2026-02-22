@@ -22,13 +22,13 @@ export default function AboutPage() {
             />
 
             {/* INTRO STORY */}
-            <section className="relative bg-white py-32 overflow-hidden">
+            <section className="relative bg-white py-16 sm:py-24 lg:py-32 overflow-hidden">
                 {/* Color accents */}
                 <div className="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-blue-100 blur-3xl opacity-70" />
                 <div className="absolute top-1/3 -right-32 h-96 w-96 rounded-full bg-indigo-100 blur-3xl opacity-70" />
 
                 <div className="relative mx-auto max-w-7xl px-6">
-                    <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-20 items-center">
+                    <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-10 lg:gap-20 items-center">
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -38,8 +38,8 @@ export default function AboutPage() {
                                 Our Identity
                             </p>
 
-                            <h2 className="text-5xl font-extrabold leading-tight mb-8 text-slate-900">
-                                We build software <br />
+                            <h2 className="text-2xl font-extrabold leading-tight mb-6 text-slate-900 sm:text-4xl lg:text-5xl">
+                                We build software{" "}
                                 <span className="bg-linear-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                                     that scales with ambition.
                                 </span>
@@ -88,18 +88,18 @@ export default function AboutPage() {
             </section>
 
             {/* MISSION & VISION */}
-            <section className="bg-linear-to-b from-blue-50 to-white py-28">
+            <section className="bg-linear-to-b from-blue-50 to-white py-16 sm:py-24 lg:py-28">
                 <div className="mx-auto max-w-7xl px-6">
-                    <div className="grid md:grid-cols-2 gap-16">
+                    <div className="grid md:grid-cols-2 gap-8 lg:gap-16">
 
                         {/* MISSION */}
                         <motion.div
                             whileHover={{ y: -8 }}
-                            className="rounded-3xl bg-white p-12 border border-blue-100 transition hover:shadow-xl"
+                            className="rounded-3xl bg-white p-6 sm:p-10 lg:p-12 border border-blue-100 transition hover:shadow-xl"
                         >
                             <Target className="h-10 w-10 text-blue-600 mb-6" />
 
-                            <h3 className="text-3xl font-bold text-slate-900 mb-6">
+                            <h3 className="text-xl font-bold text-slate-900 mb-4 sm:text-3xl">
                                 Our Mission
                             </h3>
 
@@ -124,11 +124,11 @@ export default function AboutPage() {
                         {/* VISION */}
                         <motion.div
                             whileHover={{ y: -8 }}
-                            className="rounded-3xl bg-white p-12 border border-indigo-100 transition hover:shadow-xl"
+                            className="rounded-3xl bg-white p-6 sm:p-10 lg:p-12 border border-indigo-100 transition hover:shadow-xl"
                         >
                             <Lightbulb className="h-10 w-10 text-indigo-600 mb-6" />
 
-                            <h3 className="text-3xl font-bold text-slate-900 mb-6">
+                            <h3 className="text-xl font-bold text-slate-900 mb-4 sm:text-3xl">
                                 Our Vision
                             </h3>
 
@@ -155,7 +155,7 @@ export default function AboutPage() {
             </section>
 
             {/* VALUES */}
-            <section className="bg-white py-32">
+            <section className="bg-white py-16 sm:py-24 lg:py-32">
                 <div className="mx-auto max-w-7xl px-6">
                     <div className="grid lg:grid-cols-[1.5fr_1fr] gap-8 items-start">
                         {/* Left: principles timeline */}
@@ -164,7 +164,7 @@ export default function AboutPage() {
                                 <p className="text-sm font-semibold tracking-widest uppercase mb-4 text-blue-600">
                                     Our Principles
                                 </p>
-                                <h2 className="text-4xl font-extrabold text-slate-900">
+                                <h2 className="text-2xl font-extrabold text-slate-900 sm:text-4xl">
                                     Values that shape our culture
                                 </h2>
                             </div>
@@ -233,11 +233,11 @@ export default function AboutPage() {
             </section>
 
             {/* WHY CODIQ */}
-            <section className="bg-linear-to-r from-blue-50 to-indigo-50 py-28">
+            <section className="bg-linear-to-r from-blue-50 to-indigo-50 py-16 sm:py-24 lg:py-28">
                 <div className="mx-auto max-w-7xl px-6">
                     <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
-                        <h2 className="text-4xl font-extrabold text-slate-900 max-w-xl">
-                            Why businesses choose <br /> Codiq Solutions
+                        <h2 className="text-2xl font-extrabold text-slate-900 max-w-xl sm:text-4xl">
+                            Why businesses choose Codiq Solutions
                         </h2>
 
                         <div className="grid sm:grid-cols-2 gap-6 max-w-xl">

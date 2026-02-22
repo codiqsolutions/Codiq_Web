@@ -23,7 +23,7 @@ export function Footer() {
               />
             </Link>
 
-            <p className="-mt-15 ms-7 text-base text-slate-300 leading-relaxed max-w-md">
+            <p className="mt-4 text-base text-slate-300 leading-relaxed max-w-md">
               Transforming ideas into digital reality. We build scalable,
               high-performance software and AI-driven solutions for modern
               businesses.

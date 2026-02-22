@@ -12,9 +12,9 @@ type Testimonial = {
 
 const testimonials: Testimonial[] = [
   {
-    name: "Ankit Pansuriya",
-    role: "Founder",
-    company: "AIMAVEN Solution",
+    name: "Parth Pansuriya",
+    role: "Company Manager",
+    company: "CodeBase Solution",
     feedback:
       "The team delivered a scalable, secure, and performance-driven solution. Their technical expertise and communication were exceptional throughout the project.",
   },

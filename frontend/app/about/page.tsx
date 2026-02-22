@@ -218,11 +218,11 @@ export default function AboutPage() {
                         >
                             <div className="relative w-full max-w-md h-[460px] md:h-[520px] lg:h-[500px] flex items-center justify-center rounded-2xl overflow-hidden shadow-[0_10px_50px_rgba(15,23,42,0.18)] transition-transform duration-300 ease-out hover:scale-[1.02] hover:shadow-[0_20px_30px_rgba(20,10,44,0.20)]">
                                 <Image
-                                    src="/ITphoto.jpg"
-                                    alt="Principal at Codiq Solutions"
+                                    src="/images/about-team.png"
+                                    alt="Codiq Solutions team collaborating"
                                     width={640}
                                     height={500}
-                                    className="h-full w-auto object-cover overflow-hidden"
+                                    className="h-full w-full object-cover"
                                     priority={false}
                                 />
                                 <div className="pointer-events-none absolute inset-0 bg-black/0 hover:bg-black/5 transition-colors duration-300" />

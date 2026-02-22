@@ -24,7 +24,7 @@ export function Approach() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.1 }}
-                            className="mb-6 text-4xl font-extrabold tracking-tight text-slate-900"
+                            className="mb-6 text-2xl font-extrabold tracking-tight text-slate-900 sm:text-4xl"
                         >
                             We solve real problems -
                             <br />
@@ -36,7 +36,7 @@ export function Approach() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.2 }}
-                            className="max-w-xl text-lg leading-relaxed text-slate-600"
+                            className="max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg"
                         >
                             Technology should simplify complexity, not add to it.
                             Our process is built around clarity, performance, and

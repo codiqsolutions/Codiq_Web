@@ -48,7 +48,7 @@ export default function Testimonials() {
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl"
+            className="text-2xl font-extrabold tracking-tight text-slate-900 sm:text-4xl sm:text-5xl"
           >
             What Our Clients & Users Say
           </motion.h2>
@@ -79,7 +79,7 @@ export default function Testimonials() {
               <Quote className="mb-6 h-10 w-10 text-blue-600/30" />
 
               {/* Feedback */}
-              <p className="mb-8 text-lg leading-relaxed text-slate-700">
+              <p className="mb-8 text-base leading-relaxed text-slate-700 sm:text-lg">
                 “{item.feedback}”
               </p>
 

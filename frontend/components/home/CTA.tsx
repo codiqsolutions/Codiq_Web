@@ -20,7 +20,7 @@ export default function CTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl"
+          className="text-2xl font-extrabold tracking-tight text-slate-900 sm:text-4xl sm:text-5xl"
         >
           Let’s Build Something{" "}
           <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 bg-clip-text text-transparent">
@@ -34,7 +34,7 @@ export default function CTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="mx-auto mt-6 max-w-2xl text-lg text-slate-600"
+          className="mx-auto mt-6 max-w-2xl text-base text-slate-600 sm:text-lg"
         >
           From idea to deployment, we design and engineer scalable digital
           solutions that help businesses grow faster.

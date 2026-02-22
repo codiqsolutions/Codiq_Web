@@ -60,7 +60,7 @@ export default function TechnologiesWeUse() {
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl"
+              className="text-2xl font-extrabold tracking-tight text-slate-900 sm:text-4xl sm:text-5xl"
             >
               Our Technology Stack
             </motion.h2>

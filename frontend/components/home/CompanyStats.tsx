@@ -40,7 +40,7 @@ export default function CompanyStats() {
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl"
+            className="text-2xl font-extrabold tracking-tight text-slate-900 sm:text-4xl sm:text-5xl"
           >
             Our Impact in Numbers
           </motion.h2>
@@ -71,7 +71,7 @@ export default function CompanyStats() {
               {/* Divider */}
               <div className="absolute -left-5 top-0 hidden h-full w-px bg-slate-200 lg:block" />
 
-              <div className="text-5xl font-extrabold tracking-tight text-slate-900">
+              <div className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
                 {stat.value}
               </div>
 

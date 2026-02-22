@@ -73,7 +73,7 @@ export default function Services() {
                         initial={{ opacity: 0, y: 16 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl"
+                        className="text-2xl font-extrabold tracking-tight text-slate-900 sm:text-4xl sm:text-5xl"
                     >
                         Solutions Designed to Scale
                     </motion.h2>
@@ -128,7 +128,7 @@ export default function Services() {
                                     <service.icon className="h-6 w-6 transition-colors duration-300 group-hover:text-white" />
                                 </div>
 
-                                <h3 className="mb-3 text-2xl font-bold text-slate-900">
+                                <h3 className="mb-3 text-lg font-bold text-slate-900 sm:text-2xl">
                                     {service.title}
                                 </h3>
 

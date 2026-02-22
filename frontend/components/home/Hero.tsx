@@ -37,9 +37,9 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-white pt-24 pb-24 sm:pt-32 sm:pb-36">
       {/* Subtle Background Accents */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute -top-32 left-1/2 -translate-x-1/2 h-[420px] w-[900px] rounded-full bg-linear-to-r from-blue-100 via-indigo-100 to-violet-100 blur-3xl opacity-60" />
-        <div className="absolute bottom-0 right-0 h-[300px] w-[600px] bg-blue-100/40 blur-3xl" />
+      <div className="absolute inset-0 -z-10 overflow-hidden">
+        <div className="absolute -top-32 left-1/2 -translate-x-1/2 h-[420px] w-full sm:w-[900px] rounded-full bg-linear-to-r from-blue-100 via-indigo-100 to-violet-100 blur-3xl opacity-60" />
+        <div className="absolute bottom-0 right-0 h-[300px] w-full sm:w-[600px] bg-blue-100/40 blur-3xl" />
       </div>
 
       {/* Animated Blur Circle Behind Text */}
@@ -77,9 +77,9 @@ export default function Hero() {
         {/* Heading */}
         <div className="relative">
           <motion.h1
-            className="mx-auto max-w-5xl text-2xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-6xl"
+            className="mx-auto max-w-full px-2 text-2xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-6xl break-words whitespace-normal"
           >
-            <span className="bg-linear-to-r from-[#000B58] via-[#003161] to-indigo-800 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-[#000B58] via-[#003161] to-indigo-800 bg-clip-text text-transparent inline">
               {currentText}
               <span className="animate-pulse">|</span>
             </span>

@@ -33,7 +33,7 @@ export default function RootLayout({
       >
         <VisitTracker />
         <Header />
-        <main className="flex-grow pt-16">{children}</main>
+        <main className="flex-grow pt-16 overflow-x-hidden">{children}</main>
         <Footer />
       </body>
     </html>

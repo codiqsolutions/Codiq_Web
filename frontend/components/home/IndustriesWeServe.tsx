@@ -57,10 +57,10 @@ const industries = [
 
 export default function IndustriesWeServe() {
   return (
-    <section className="bg-white py-28">
+    <section className="bg-white py-16 sm:py-24 lg:py-28">
       <div className="mx-auto max-w-7xl px-6">
         {/* Header */}
-        <div className="mb-20 max-w-3xl">
+        <div className="mb-10 sm:mb-16 lg:mb-20 max-w-3xl">
           <motion.h2
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -91,7 +91,7 @@ export default function IndustriesWeServe() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.08 }}
-              className="grid gap-6 py-10 md:grid-cols-[240px_1fr_1fr]"
+              className="grid gap-4 py-8 sm:py-10 md:grid-cols-3 md:gap-6"
             >
               {/* Industry */}
               <div className="flex items-center gap-4">

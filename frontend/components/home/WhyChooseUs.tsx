@@ -57,7 +57,7 @@ const features: Feature[] = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="relative bg-white py-32">
+    <section className="relative bg-white py-16 sm:py-24 lg:py-32">
       {/* Soft background accent */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute left-1/2 top-0 h-[420px] w-[900px] -translate-x-1/2 rounded-full bg-gradient-to-r from-blue-100 via-indigo-100 to-violet-100 blur-3xl opacity-60" />
@@ -65,7 +65,7 @@ export default function WhyChooseUs() {
 
       <div className="mx-auto max-w-7xl px-6">
         {/* Header */}
-        <div className="mx-auto mb-20 max-w-3xl text-center">
+        <div className="mx-auto mb-10 sm:mb-16 lg:mb-20 max-w-3xl text-center">
           <motion.h2
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}

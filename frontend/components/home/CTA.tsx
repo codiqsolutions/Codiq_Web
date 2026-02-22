@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react"
 
 export default function CTA() {
   return (
-    <section className="relative overflow-hidden bg-blue-50 py-28">
+    <section className="relative overflow-hidden bg-blue-50 py-16 sm:py-24 lg:py-28">
       {/* Subtle background accents */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute left-1/2 top-0 h-[300px] w-[800px] -translate-x-1/2 rounded-full bg-gradient-to-r from-blue-100 via-indigo-100 to-violet-100 blur-3xl opacity-60" />
@@ -22,8 +22,7 @@ export default function CTA() {
           transition={{ duration: 0.5 }}
           className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl"
         >
-          Let’s Build Something
-          <br />
+          Let’s Build Something{" "}
           <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 bg-clip-text text-transparent">
             Remarkable Together
           </span>

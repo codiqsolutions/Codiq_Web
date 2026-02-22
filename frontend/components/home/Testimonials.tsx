@@ -35,7 +35,7 @@ const testimonials: Testimonial[] = [
 
 export default function Testimonials() {
   return (
-    <section className="relative bg-blue-50 py-28">
+    <section className="relative bg-blue-50 py-16 sm:py-24 lg:py-28">
       {/* Soft accent */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute right-0 top-20 h-[350px] w-[350px] rounded-full bg-blue-100 blur-3xl opacity-50" />
@@ -43,7 +43,7 @@ export default function Testimonials() {
 
       <div className="mx-auto max-w-7xl px-6">
         {/* Header */}
-        <div className="mb-20 max-w-3xl">
+        <div className="mb-10 sm:mb-16 lg:mb-20 max-w-3xl">
           <motion.h2
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -65,7 +65,7 @@ export default function Testimonials() {
         </div>
 
         {/* Testimonials */}
-        <div className="grid gap-16 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 md:gap-12 lg:grid-cols-3 lg:gap-16">
           {testimonials.map((item, index) => (
             <motion.div
               key={item.name}

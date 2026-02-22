@@ -51,9 +51,9 @@ const techStack = [
 
 export default function TechnologiesWeUse() {
   return (
-    <section className="relative bg-blue-50 py-32">
+    <section className="relative bg-blue-50 py-16 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="grid gap-16 lg:grid-cols-2">
+        <div className="grid gap-10 lg:gap-16 lg:grid-cols-2">
           {/* LEFT CONTENT */}
           <div className="lg:sticky lg:top-32 h-fit">
             <motion.h2

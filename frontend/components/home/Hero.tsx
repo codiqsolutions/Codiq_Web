@@ -86,7 +86,7 @@ export default function Hero() {
           </motion.h1>
 
           <motion.h1
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 1, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.05 }}
             className="mx-auto mt-2 max-w-5xl text-2xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-7xl"
@@ -99,7 +99,7 @@ export default function Hero() {
 
         {/* Subtitle */}
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 1, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.15 }}
           className="mx-auto mt-5 sm:mt-6 max-w-2xl"

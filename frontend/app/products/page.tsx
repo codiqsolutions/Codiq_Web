@@ -11,6 +11,7 @@ import {
   Clock,
 } from "lucide-react"
 import { useState, useEffect } from "react"
+import Link from "next/link"
 
 export default function ProductsPage() {
   const texts = ["Full Stack Development", "Graphics Design", "Digital Marketing"]
@@ -52,13 +53,13 @@ export default function ProductsPage() {
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-16 max-w-3xl">
             <p className="text-sm font-semibold tracking-widest uppercase text-blue-600 mb-3">
-              In Development
+              Our Projects
             </p>
             <h2 className="text-4xl font-extrabold text-slate-900">
-              Products Under Active Development
+              Featured Live Projects
             </h2>
             <p className="mt-4 text-lg text-slate-600">
-              Carefully engineered platforms currently in progress, designed to
+              Carefully engineered platforms designed to
               deliver long-term value and scalability.
             </p>
           </div>
@@ -76,13 +77,13 @@ export default function ProductsPage() {
                 <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
                   <Briefcase className="h-7 w-7" />
                 </div>
-                <span className="inline-flex items-center gap-2 rounded-full bg-amber-100 px-4 py-1 text-sm font-medium text-amber-700">
-                  <Clock className="h-4 w-4" /> In Development
+                <span className="inline-flex items-center gap-2 rounded-full bg-green-100 px-4 py-1 text-sm font-medium text-green-700">
+                  <Sparkles className="h-4 w-4" /> Live
                 </span>
               </div>
 
               <h3 className="text-2xl font-bold text-slate-900 mb-4">
-                Connectify
+                Smarty Inventory Management
               </h3>
 
               <p className="text-slate-600 leading-relaxed mb-6">
@@ -91,15 +92,9 @@ export default function ProductsPage() {
                 within one intelligent digital ecosystem.
               </p>
 
-              <ul className="space-y-3 text-slate-600 text-sm">
-                <li>• Professional networking & profiles</li>
-                <li>• Job discovery and hiring tools</li>
-                <li>• Skill development & engagement features</li>
-              </ul>
-
-              <div className="mt-8 inline-flex items-center gap-2 font-medium text-blue-600">
-                Product Preview <ArrowUpRight className="h-4 w-4" />
-              </div>
+              <Link href="/products/smarty-inventory" className="mt-8 inline-flex items-center gap-2 font-medium text-blue-600 hover:text-blue-700 transition">
+                Project Overview <ArrowUpRight className="h-4 w-4" />
+              </Link>
             </motion.div>
 
             {/* PDF CONVERTER */}
@@ -115,30 +110,24 @@ export default function ProductsPage() {
                 <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600">
                   <FileText className="h-7 w-7" />
                 </div>
-                <span className="inline-flex items-center gap-2 rounded-full bg-amber-100 px-4 py-1 text-sm font-medium text-amber-700">
-                  <Clock className="h-4 w-4" /> In Development
+                <span className="inline-flex items-center gap-2 rounded-full bg-green-100 px-4 py-1 text-sm font-medium text-green-700">
+                  <Sparkles className="h-4 w-4" /> Live
                 </span>
               </div>
 
               <h3 className="text-2xl font-bold text-slate-900 mb-4">
-                Smart PDF Converter
+                Coffee Shop Management
               </h3>
 
               <p className="text-slate-600 leading-relaxed mb-6">
-                A secure and high-performance document conversion tool designed
-                to simplify PDF transformations while maintaining privacy and
-                quality.
+                A smart coffee shop e-commerce platform built to
+                simplify digital ordering, enhance customer engagement,
+                and optimize business operations.
               </p>
 
-              <ul className="space-y-3 text-slate-600 text-sm">
-                <li>• PDF to Word, Excel & Images</li>
-                <li>• Privacy-first file handling</li>
-                <li>• Fast & reliable processing</li>
-              </ul>
-
-              <div className="mt-8 inline-flex items-center gap-2 font-medium text-indigo-600">
-                Feature Overview <ArrowUpRight className="h-4 w-4" />
-              </div>
+              <Link href="/products/coffee-shop" className="mt-8 inline-flex items-center gap-2 font-medium text-indigo-600 hover:text-indigo-700 transition">
+                Project Overview <ArrowUpRight className="h-4 w-4" />
+              </Link>
             </motion.div>
           </div>
         </div>

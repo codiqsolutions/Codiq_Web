@@ -10,14 +10,19 @@ export default function VisitTracker() {
         // Don't track admin pages
         if (pathname.startsWith('/admin') || pathname.startsWith('/login')) return
 
-        fetch('/api/visits', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                path: pathname,
-                referrer: document.referrer || null
-            })
-        }).catch(() => { /* silent fail */ })
+        // Delay execution by 3 seconds to avoid blocking main thread
+        const timer = setTimeout(() => {
+            fetch('/api/visits', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    path: pathname,
+                    referrer: document.referrer || null
+                })
+            }).catch(() => { /* silent fail */ })
+        }, 3000)
+
+        return () => clearTimeout(timer)
     }, [pathname])
 
     return null
